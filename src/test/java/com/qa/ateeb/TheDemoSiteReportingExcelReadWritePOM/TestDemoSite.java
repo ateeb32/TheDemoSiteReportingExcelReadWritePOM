@@ -34,8 +34,7 @@ public class TestDemoSite {
 	public static void initial() {
 
 		report = new ExtentReports(
-				"C:\\Users\\Admin\\Desktop\\My Eclipse Workspace\\TheDemoSiteReportingExcelReadWritePOM\\Reports\\Report.html",
-				true); // REPORTING
+				"C:\\Users\\Admin\\Desktop\\My Eclipse Workspace\\TheDemoSiteReportingExcelReadWritePOM\\Reports\\Report.html", true); // REPORTING
 
 	}
 
@@ -86,11 +85,6 @@ public class TestDemoSite {
 			loginUserPage.writePassFieldLogin(pass);
 			loginUserPage.clickTestLogin();
 
-			// assertTrue("Login Unsuccessful! (assertTrue)",
-			// loginUserPage.checkSuccessfulLogin());
-			// assertEquals("Login Unsuccessful! (assertEquals)", "**Successful Login**",
-			// loginUserPage.checkSuccessfulLoginString());
-
 			test.log(LogStatus.INFO, "Login Test Running ..."); // REPORTING
 			if (loginUserPage.checkSuccessfulLoginString().equals("**Successful Login**")) { // REPORTING
 
@@ -111,11 +105,6 @@ public class TestDemoSite {
 //			assertEquals("Login Unsuccessful! (assertEquals)", "**Successful Login**",
 //					loginUserPage.checkSuccessfulLoginString());
 			// report.endTest(test); //REPORTING
-
-			// Thread.sleep(1000);
-			// WebElement checkElement =
-			// driver.findElement(By.xpath("//*[@id=\"b_context\"]/li[1]/div/div[1]/h2"));
-			// assertEquals("Selenium", searchPage.heading.getText());
 
 			String writeToExcelCheck = loginUserPage.checkSuccessfulLoginString();
 			String expected = "**Successful Login**";
